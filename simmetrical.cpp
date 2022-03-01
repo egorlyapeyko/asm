@@ -1,22 +1,24 @@
 ﻿#include <iostream>
 int main() {
 	int n;
-    int res;
+        int res;
 	std::cout << "Please, enter the natural number: \n";
 	do
 	{
 		std::cin >> n;
 	}
-    while (n < 0);
+        while (n < 0);
 	std::cout << "Your number is " << n;
     _asm {
-        mov esi, 1
-        mov eax, n;
-        xor ecx, ecx
+            mov esi, 1
+            mov eax, n;
+            xor ecx, ecx
             mov ebx, 10
 
             form_digits_loop:
-       test eax, eax
+            
+	    test eax, eax
+            
             jz continue
             xor edx, edx
             div ebx
