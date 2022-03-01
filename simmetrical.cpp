@@ -40,9 +40,9 @@ int main() {
             dec ecx
             jmp cmp_loop
             not_equal :
-        xor esi, esi
+            xor esi, esi
             finish :
-        lea esp, [esp + ebx * 4]
+            lea esp, [esp + ebx * 4]
             mov res, esi
     }
     if (res)
